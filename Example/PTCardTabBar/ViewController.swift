@@ -26,10 +26,15 @@ class ViewController: UIViewController {
         present(tabBarController!, animated: true, completion: nil)
     }
     
-
     @IBAction func codeButtonTapped(_ sender: Any) {
         let tabBarController = PTTabBarViewController()
         present(tabBarController, animated: true, completion: nil)
     }
+	
+	@IBAction func showHideButtonTapped(_ sender: Any) {
+		let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: "ShowHideCardTabBarController")
+		present(tabBarController!, animated: true, completion: nil)
+	}
+	
 }
 
